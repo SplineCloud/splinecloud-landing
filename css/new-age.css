@@ -61,8 +61,51 @@ section h2 {
 }
 
 
+
+form input {
+  border: none;
+  border-bottom: solid 1px #3282b8;
+}
+
+form textarea {
+  border: solid 1px #3282b8;
+  border-radius: 2px;
+  width: 100%;
+  min-height: 100px;
+}
+
+form input:hover {
+  border-bottom: solid 2px #3282b8;
+}
+
+textarea:hover, input:hover, textarea:active, input:active, textarea:focus, input:focus {
+  outline:0px !important;
+}
+
+button:hover, button:active, button:focus {
+  /*outline: 2px  !important;*/
+  outline-color: #3282b8 !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+}
+
+@media (max-width: 768px) {
+  input {
+    width: 100%;
+  }
+}
+
+
 .text-white {
-color: white;
+  color: white;
 }
 
 #logotop:hover #sclogo {
@@ -355,7 +398,6 @@ section.cta .cta-content h2 {
   }
 }
 
-
 @media (max-width: 991px) {
   header.masthead {
     background-position: 100% 100%
@@ -379,7 +421,6 @@ section.cta .cta-content h2 {
     background-size: cover;
   }
 }
-
 
 section.cta .overlay {
   position: absolute;
@@ -474,7 +515,6 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 .bg-blue {
   /*background: #0f2e47;*/
   background: white;
-
 }
 
 .text-primary {
@@ -514,48 +554,6 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 .feature-item img {
   max-height: 150px;
   padding-bottom: 20px;
-
-}
-
-@media (max-width: 768px) {
-  input {
-    width: 100%;
-  }
-}
-
-form input {
-  border: none;
-  border-bottom: solid 1px #3282b8;
-}
-
-form textarea {
-  border: solid 1px #3282b8;
-  border-radius: 2px;
-  width: 100%;
-  min-height: 100px;
-}
-
-form input:hover {
-  border-bottom: solid 2px #3282b8;
-}
-
-textarea:hover, input:hover, textarea:active, input:active, textarea:focus, input:focus {
-  outline:0px !important;
-}
-
-button:hover, button:active, button:focus {
-  /*outline: 2px  !important;*/
-  outline-color: #3282b8 !important;
 }
 
 
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
-}
