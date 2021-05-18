@@ -108,6 +108,14 @@ select:-webkit-autofill:focus {
   color: white;
 }
 
+.text-black {
+  color: black;
+}
+
+.text-lightgrey {
+  color: lightgrey;
+}
+
 #logotop:hover #sclogo {
   -webkit-filter: drop-shadow(1px 1px 2px #75b0e6);
   filter: drop-shadow(1px 1px 2px #75b0e6);
@@ -430,6 +438,23 @@ section.cta .overlay {
   height: 100%;
   /*background-color: rgba(19, 51, 72, 0.85);*/
 }
+
+section.solutions {
+  position: relative;
+  padding: 60px 0;
+  background-color: #65727e;
+  background-size: 100% auto;
+}
+
+.slide {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 12%;
+  padding-right: 12%;
+  -webkit-filter: drop-shadow(1px 1px 5px #1b4261);
+  filter: drop-shadow(1px 1px 5px #1b4261);
+}
+
 
 section.contact {
   text-align: center;
