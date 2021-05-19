@@ -117,7 +117,7 @@ select:-webkit-autofill:focus {
 }
 
 .text-lightgrey {
-  color: lightgrey;
+  color: #c4c8d7;
 }
 
 .text-400{
@@ -459,10 +459,14 @@ section.solutions {
 }
 
 section.solutions .solution-items h3, 
-section.solutions .solution-items p {
+section.solutions .solution-items p{
   font-weight: 400;
   -webkit-filter: drop-shadow(1px 1px 5px #595f66);
   filter: drop-shadow(1px 1px 5px #595f66);
+}
+
+section.solutions .solution-items a {
+  color: white;
 }
 
 .slide {
