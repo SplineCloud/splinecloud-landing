@@ -455,7 +455,7 @@ section.solutions {
   position: relative;
   padding: 100px 0;
   padding-bottom: 0;
-  background: url("../img/bg-pattern2.png"), #5f666f;
+  background: url("../img/bg-pattern.png"), #5f666f;
 }
 
 section.solutions .solution-items h3, 
