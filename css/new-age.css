@@ -108,6 +108,10 @@ select:-webkit-autofill:focus {
   color: white;
 }
 
+.text-lightblue {
+  color: #acccf7;
+}
+
 .text-black {
   color: black;
 }
@@ -356,6 +360,10 @@ section.features .feature-item i {
   -webkit-text-fill-color: transparent;
 }
 
+.feature-item img {
+  max-height: 150px;
+  padding-bottom: 20px;
+}
 
 section.contact .section-heading {
   margin-bottom: 100px;
@@ -441,9 +449,16 @@ section.cta .overlay {
 
 section.solutions {
   position: relative;
-  padding: 60px 0;
-  background-color: #65727e;
-  background-size: 100% auto;
+  padding: 100px 0;
+  padding-bottom: 0;
+  background: url("../img/bg-pattern2.png"), #5f666f;
+}
+
+section.solutions .solution-items h3, 
+section.solutions .solution-items p {
+  font-weight: 400;
+  -webkit-filter: drop-shadow(1px 1px 5px #595f66);
+  filter: drop-shadow(1px 1px 5px #595f66);
 }
 
 .slide {
@@ -451,14 +466,32 @@ section.solutions {
   padding-bottom: 50px;
   padding-left: 12%;
   padding-right: 12%;
-  -webkit-filter: drop-shadow(1px 1px 5px #1b4261);
-  filter: drop-shadow(1px 1px 5px #1b4261);
+  -webkit-filter: drop-shadow(1px 1px 5px #33383c);
+  filter: drop-shadow(1px 1px 5px #33383c);
 }
 
+section.solutions .solution-items {
+  margin-top: 100px;
+}
+
+section.solutions .solution-item {
+  padding-top: 0px;
+  padding-bottom: 150px;
+  text-align: left;
+}
+
+section.solutions .solution-item i {
+  color: white;
+  font-size: 24px;
+}
+
+.solution-item img {
+  max-height: 150px;
+  padding-bottom: 20px;
+}
 
 section.contact {
   text-align: center;
-
 }
 
 section.contact h2 {
@@ -573,12 +606,6 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 .btn-xl {
   font-size: 11px;
   padding: 15px 45px;
-}
-
-
-.feature-item img {
-  max-height: 150px;
-  padding-bottom: 20px;
 }
 
 
