@@ -25,7 +25,6 @@
 
   <!-- Custom styles for this template -->
   <link href="css/new-age.css" rel="stylesheet">
-  <link href="css/clouds.css" rel="stylesheet">
   <link rel="icon" type="image/png" href="img/favicon.png"/>
   <!-- <link rel="icon" href="img/edem-icon-ED.png"> -->
 
@@ -37,6 +36,20 @@
     gtag('js', new Date());
 
     gtag('config', 'G-3K9QMKCN40');
+  </script>
+
+  <!-- Determine website version to show based on odd or even IP address -->
+  <script type="application/javascript">
+    var site_version = 0
+    fetch('http://ip-api.com/json')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(location_data) {
+        let ip_to_int = location_data.query.replaceAll(".", "");
+        site_version = ip_to_int%2;
+        console.log("site_version:", site_version)
+      });
   </script>
 
 </head>
