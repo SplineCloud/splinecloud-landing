@@ -48,7 +48,19 @@
       .then(function(location_data) {
         let ip_to_int = location_data.query.replaceAll(".", "");
         site_version = ip_to_int%2;
-        console.log("site_version:", site_version)
+        console.log("site_version:", site_version);
+        if (site_version) {
+          let solnav = document.getElementById("solnav");
+          solnav.classList.remove("d-none");
+          let section = document.getElementById("solutions");
+          section.classList.remove("d-none");
+        }
+        else {
+          let solnav = document.getElementById("solnav-min");
+          solnav.classList.remove("d-none");
+          let section = document.getElementById("solutions-min");
+          section.classList.remove("d-none");
+        }
       });
   </script>
 
@@ -73,7 +85,10 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#features">Features</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-none" id="solnav-min">
+            <a class="nav-link js-scroll-trigger" href="#solutions-min">Solutions</a>
+          </li>
+          <li class="nav-item d-none" id="solnav">
             <a class="nav-link js-scroll-trigger" href="#solutions">Solutions</a>
           </li>
           <li class="nav-item">
@@ -184,7 +199,21 @@
     </div>
   </section>
 
-  <section class="solutions" id="solutions">
+  <section class="solutions d-none" id="solutions-min">
+    <div class="container solutions-heading">
+      <div class="section-heading text-center">
+        <h2 class="text-white">Advanced engineering solutions</h2>
+        <h3 class="text-white">Developing complex engineering systems and looking for state-of-the-art solutions?</h3>
+        <img src="img/iceworm_white.png" class="w-80 my-5">
+        <h3 class="text-lightgrey mb-5"> We can help you with mathematical models, engineering calculations, numerical simulations and multidisciplinary design optimization</h3>
+      </div>
+      <div class="text-center pb-6">
+        <a href="#contact" class="btn btn-primary btn-xl js-scroll-trigger">Leave us a message</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="solutions d-none" id="solutions">
     <div class="container solutions-heading">
       <div class="section-heading text-center">
         <h2 class="text-white">Advanced engineering solutions</h2>
