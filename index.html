@@ -42,33 +42,19 @@
   <script type="application/javascript">
 
     function setSolSectionV1() {
-      let solnav = document.getElementById("solnav");
-      solnav.classList.add("d-none");
-      let section = document.getElementById("solutions");
-      section.classList.add("d-none");
-
-      let solnav_min = document.getElementById("solnav-min");
-      solnav_min.classList.remove("d-none");
-      let section_min = document.getElementById("solutions-min");
-      section_min.classList.remove("d-none");
-
-      let solswitch_label = document.getElementById("website-version-switch-label");
-      solswitch_label.innerHTML = "V1"
+      document.getElementById("solnav").classList.add("d-none");
+      document.getElementById("solutions").classList.add("d-none");
+      document.getElementById("solnav-min").classList.remove("d-none");
+      document.getElementById("solutions-min").classList.remove("d-none");
+      document.getElementById("website-version-switch-label").innerHTML = "V1"
     }
 
     function setSolSectionV2() {
-      let solnav = document.getElementById("solnav");
-      solnav.classList.remove("d-none");
-      let section = document.getElementById("solutions");
-      section.classList.remove("d-none");
-
-      let solnav_min = document.getElementById("solnav-min");
-      solnav_min.classList.add("d-none");
-      let section_min = document.getElementById("solutions-min");
-      section_min.classList.add("d-none");
-
-      let solswitch_label = document.getElementById("website-version-switch-label");
-      solswitch_label.innerHTML = "V2"
+      document.getElementById("solnav").classList.remove("d-none");
+      document.getElementById("solutions").classList.remove("d-none");
+      document.getElementById("solnav-min").classList.add("d-none");
+      document.getElementById("solutions-min").classList.add("d-none");
+      document.getElementById("website-version-switch-label").innerHTML = "V2"
     }
 
     var site_version = 0
