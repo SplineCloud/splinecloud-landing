@@ -40,6 +40,37 @@
 
   <!-- Determine website version to show based on odd or even IP address -->
   <script type="application/javascript">
+
+    function setSolSectionV1() {
+      let solnav = document.getElementById("solnav");
+      solnav.classList.add("d-none");
+      let section = document.getElementById("solutions");
+      section.classList.add("d-none");
+
+      let solnav_min = document.getElementById("solnav-min");
+      solnav_min.classList.remove("d-none");
+      let section_min = document.getElementById("solutions-min");
+      section_min.classList.remove("d-none");
+
+      let solswitch_label = document.getElementById("website-version-switch-label");
+      solswitch_label.innerHTML = "V1"
+    }
+
+    function setSolSectionV2() {
+      let solnav = document.getElementById("solnav");
+      solnav.classList.remove("d-none");
+      let section = document.getElementById("solutions");
+      section.classList.remove("d-none");
+
+      let solnav_min = document.getElementById("solnav-min");
+      solnav_min.classList.add("d-none");
+      let section_min = document.getElementById("solutions-min");
+      section_min.classList.add("d-none");
+
+      let solswitch_label = document.getElementById("website-version-switch-label");
+      solswitch_label.innerHTML = "V2"
+    }
+
     var site_version = 0
     fetch('http://ip-api.com/json')
       .then(function(response) {
@@ -50,16 +81,12 @@
         site_version = ip_to_int%2;
         console.log("site_version:", site_version);
         if (site_version) {
-          let solnav = document.getElementById("solnav");
-          solnav.classList.remove("d-none");
-          let section = document.getElementById("solutions");
-          section.classList.remove("d-none");
+          setSolSectionV2();
+          let solswitch = document.getElementById("website-version-switch");
+          solswitch.checked = true;
         }
         else {
-          let solnav = document.getElementById("solnav-min");
-          solnav.classList.remove("d-none");
-          let section = document.getElementById("solutions-min");
-          section.classList.remove("d-none");
+          setSolSectionV1();
         }
       });
   </script>
@@ -341,9 +368,22 @@
     </div>
   </section>
 
+
   <footer>
     <div class="container">
-      <p>&copy; SplineCloud 2021. All Rights Reserved.</p>
+      <div class="row">
+        <div class="col-4">
+        </div>
+        <div class="col-4">
+          <p>&copy; SplineCloud 2021. All Rights Reserved.</p>
+        </div>
+        <div class="col-4 footer-switch">
+          <div class="custom-control custom-switch float-right">
+            <input type="checkbox" class="custom-control-input" id="website-version-switch">
+            <label class="custom-control-label pt-1" id="website-version-switch-label" for="website-version-switch">V1</label>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
 
@@ -356,6 +396,19 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/new-age.min.js"></script>
+
+  <script type="application/javascript">
+    var solswitch = document.getElementById("website-version-switch");
+    solswitch.addEventListener('change', function(event) {
+        if (event.target.checked) {
+            setSolSectionV2();
+        }
+        else {
+            setSolSectionV1();
+        }
+      }
+    );
+  </script>
 
 </body>
 
