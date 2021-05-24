@@ -65,13 +65,15 @@ section h2 {
 form input {
   border: none;
   border-bottom: solid 1px #3282b8;
+  background: rgba(255,255,255,0.75);
 }
 
 form textarea {
   border: solid 1px #3282b8;
-  border-radius: 2px;
+  border-radius: 4px;
   width: 100%;
   min-height: 100px;
+  background: rgba(255,255,255,0.75);
 }
 
 form input:hover {
@@ -633,6 +635,10 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   padding-bottom: 100px !important;
 }
 
+.mt-6 {
+  margin-top: 100px;
+}
+
 .footer-switch .custom-control-label {
   font-size: 10px;
 }
@@ -662,4 +668,8 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 
 .footer-switch  .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
   border-color: #4d4d4d;
+}
+
+#send-msg:not(:active):not(:hover):not(:focus) {
+  background: white;
 }
