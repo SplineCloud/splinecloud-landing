@@ -60,8 +60,6 @@ section h2 {
   font-size: 50px;
 }
 
-
-
 form input {
   border: none;
   border-bottom: solid 1px #3282b8;
@@ -76,8 +74,14 @@ form textarea {
   background: rgba(255,255,255,0.75);
 }
 
-form input:hover {
+form .creds input{
+  height: 30px;
+  padding: 1px;
+}
+
+form .creds input:hover {
   border-bottom: solid 2px #3282b8;
+  padding: 0;
 }
 
 textarea:hover, input:hover, textarea:active, input:active, textarea:focus, input:focus {
@@ -279,6 +283,17 @@ header.masthead .device-container .screen img {
   header.masthead .device-container {
     max-width: 325px;
   }
+}
+
+header.contacthead {
+  position: relative;
+  padding-bottom: 60px;
+  color: #3282b8;
+  background: url("../img/clouds_right.png"), white;
+  background-repeat:no-repeat;
+  background-size: 80vh;
+  background-position-x: right;
+  background-position-y: bottom;
 }
 
 section.download {
@@ -670,6 +685,10 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   border-color: #4d4d4d;
 }
 
-#send-msg:not(:active):not(:hover):not(:focus) {
-  background: white;
+#send-msg {
+  min-width: 150px;
+}
+
+.contacthead textarea {
+  min-height: 180px;
 }
