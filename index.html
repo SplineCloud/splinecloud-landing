@@ -55,25 +55,6 @@
       document.getElementById("solutions-min").classList.add("d-none");
       document.getElementById("website-version-switch-label").innerHTML = "V2"
     }
-
-    var site_version = 0
-    fetch('https://api.ipify.org?format=json')
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(location_data) {
-        let ip_to_int = location_data.ip.replaceAll(".", "");
-        site_version = ip_to_int%2;
-        console.log("site_version:", site_version);
-        if (site_version) {
-          setSolSectionV2();
-          let solswitch = document.getElementById("website-version-switch");
-          solswitch.checked = true;
-        }
-        else {
-          setSolSectionV1();
-        }
-      });
   </script>
 
 </head>
@@ -384,6 +365,32 @@
   <script src="js/new-age.min.js"></script>
 
   <script type="application/javascript">
+
+    try {
+      var site_version = 0;
+      fetch('https://api.ipify.org?format=json')
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(location_data) {
+          let ip_to_int = location_data.ip.replaceAll(".", "");
+          site_version = ip_to_int%2;
+          console.log("site_version:", site_version);
+          if (site_version) {
+            setSolSectionV2();
+            let solswitch = document.getElementById("website-version-switch");
+            solswitch.checked = true;
+          }
+          else {
+            setSolSectionV1();
+          }
+        });
+    }
+
+    catch {
+      setSolSectionV1();
+    }
+
     var solswitch = document.getElementById("website-version-switch");
     solswitch.addEventListener('change', function(event) {
         if (event.target.checked) {
