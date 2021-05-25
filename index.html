@@ -57,12 +57,12 @@
     }
 
     var site_version = 0
-    fetch('http://ip-api.com/json')
+    fetch('https://api.ipify.org?format=json')
       .then(function(response) {
         return response.json();
       })
       .then(function(location_data) {
-        let ip_to_int = location_data.query.replaceAll(".", "");
+        let ip_to_int = location_data.ip.replaceAll(".", "");
         site_version = ip_to_int%2;
         console.log("site_version:", site_version);
         if (site_version) {
