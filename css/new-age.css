@@ -289,6 +289,7 @@ header.contacthead {
   position: relative;
   padding-bottom: 60px;
   color: #3282b8;
+  min-height: 100%;
   background: url("../img/clouds_right.png"), white;
   background-repeat:no-repeat;
   background-size: 80vh;
