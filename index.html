@@ -36,27 +36,6 @@
 
     gtag('config', 'G-3K9QMKCN40');
   </script>
-
-  <!-- Determine website version to show based on odd or even IP address -->
-  <script type="application/javascript">
-
-    function setSolSectionV1() {
-      document.getElementById("solnav").classList.add("d-none");
-      document.getElementById("solutions").classList.add("d-none");
-      document.getElementById("solnav-min").classList.remove("d-none");
-      document.getElementById("solutions-min").classList.remove("d-none");
-      document.getElementById("website-version-switch-label").innerHTML = "V1"
-    }
-
-    function setSolSectionV2() {
-      document.getElementById("solnav").classList.remove("d-none");
-      document.getElementById("solutions").classList.remove("d-none");
-      document.getElementById("solnav-min").classList.add("d-none");
-      document.getElementById("solutions-min").classList.add("d-none");
-      document.getElementById("website-version-switch-label").innerHTML = "V2"
-    }
-  </script>
-
 </head>
 
 <body id="page-top">
@@ -78,11 +57,8 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#features">Features</a>
           </li>
-          <li class="nav-item d-none" id="solnav-min">
-            <a class="nav-link js-scroll-trigger" href="#solutions-min">Solutions</a>
-          </li>
-          <li class="nav-item d-none" id="solnav">
-            <a class="nav-link js-scroll-trigger" href="#solutions">Solutions</a>
+          <li class="nav-item" id="solnav">
+            <a class="nav-link js-scroll-trigger" href="#solutions">Impact</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -98,7 +74,7 @@
         <div class="col-lg-7 my-auto">
           <div class="header-content mx-auto">
             <h1 class="mb-5">Expand your creativity by discovering and exchanging structured and reusable knowledge</h1>
-            <a href="#features" class="btn btn-outline btn-xl js-scroll-trigger">Find out more</a>
+            <a href="/accounts/login/" class="btn btn-outline btn-xl js-scroll-trigger">Sign in</a>
           </div>
         </div>
         <div class="col-lg-5 my-auto">
@@ -192,30 +168,18 @@
       </div>
 
       <div class="text-center py-5">
-        <a href="./signup/" class="btn btn-outline btn-xl js-scroll-trigger">Join</a>
+        <a href="/accounts/signup/" class="btn btn-primary btn-xl js-scroll-trigger">Join</a>
       </div>
 
     </div>
   </section>
 
-  <section class="solutions d-none" id="solutions-min">
+  <section class="solutions" id="solutions">
     <div class="container solutions-heading">
       <div class="section-heading text-center">
-        <h2 class="text-white">Developing complex engineering systems and looking for state-of-the-art solutions?</h2>
-        <img src="img/iceworm_white.png" class="w-80 my-5" alt="Autonomous vehicle">
-        <h3 class="text-lightgrey mb-5"> We can help you with mathematical models, engineering calculations, numerical simulations and multidisciplinary design optimization</h3>
-      </div>
-      <div class="text-center pb-6">
-        <a href="./contact/1/" class="btn btn-primary btn-xl js-scroll-trigger">Get in touch</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="solutions d-none" id="solutions">
-    <div class="container solutions-heading">
-      <div class="section-heading text-center">
-        <h2 class="text-white">Advanced engineering solutions</h2>
-        <h3 class="text-white mb-1">for distributed teams and enterprises</h3>
+        <h2 class="text-white">Improve your business processes</h2>
+        <h3 class="text-white mb-1">more accurate knowledge-based decisions</h3>
+        <h3 class="text-white mb-1">and higher productivity of distributed engineering teams</h3>
       </div>
 
       <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
@@ -252,7 +216,7 @@
               <div class="col-lg-6">
                 <div class="solution-item">
                   <h3 class="text-white"> <i class="fas fa-laptop-code pull-left pr-2"></i>Mathematical Models </h3>
-                  <p class="text-lightgrey">Develop more precise mathematical models to simulate and/or optimize your product with SplineCloud. Find reliable data in our knowledge base, pull it into your code with SplineCloud API or simply download it</p>
+                  <p class="text-lightgrey">Develop more precise mathematical models to simulate and optimize your product with SplineCloud. Find reliable data in our knowledge base, pull it into your code with SplineCloud API and reuse it to develop accurate designs and simulations.</p>
                   <!-- <a href="#contact" class="text-400">Learn more &rsaquo;</a> -->
                 </div>
               </div>
@@ -260,22 +224,6 @@
                 <div class="solution-item">
                   <h3 class="text-white"> <i class="fas fa-project-diagram pull-left pr-2"></i>Multidisciplinary Design Optimization</h3>
                   <p class="text-lightgrey">Does your product have to address tough and conflicting requirements? With SplineCloud development of MDO applications becomes simple, transparent and more reliable</p>
-                  <!-- <a href="#contact" class="text-400">Learn more &rsaquo;</a> -->
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="solution-item">
-                  <h3 class="text-white"> <i class="fas fa-cogs pull-left pr-2"></i>Customizable Web Applications</h3>
-                  <p class="text-lightgrey">Reduce engineering lead time and encourage reuse of best practices in your company by organizing your engineering calculations into accessible and reusable web applications</p>
-                  <!-- <a href="#contact" class="text-400">Learn more &rsaquo;</a> -->
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="solution-item">
-                  <h3 class="text-white"> <i class="fas fa-fighter-jet pull-left pr-2"></i>Expert Systems</h3>
-                  <p class="text-lightgrey">Looking for ultimate design automation? We can help you develop and deploy full-fledged flexible and scalable cloud-based expert systems that will enable you to adapt your designs to new requirements in minutes rather than months</p>
                   <!-- <a href="#contact" class="text-400">Learn more &rsaquo;</a> -->
                 </div>
               </div>
@@ -291,7 +239,7 @@
               <div class="col-lg-6">
                 <div class="solution-item">
                   <h3 class="text-white"> <i class="fas fa-file-invoice pull-left pr-2"></i>Reusable Product Data Sheets</h3>
-                  <p class="text-lightgrey">Turn your product data sheets into broadly accessible and reusable data repositories to allow your customers to build more accurate models, improve integration of your products in their systems and provide you with valuable feedback, reducing time spent on negotiation and formulation of requirements</p>
+                  <p class="text-lightgrey">Turn your product data sheets into broadly accessible and reusable data repositories, allowing your customers to build more accurate models and provide you with an early feedback, that can reduce time spent on negotiation and formulation of requirements</p>
                   <!-- <a href="#contact" class="text-400">Learn more &rsaquo;</a> -->
                 </div>
               </div>
@@ -301,7 +249,7 @@
       </div>
 
       <div class="text-center pb-5">
-        <a href="./contact/2/" class="btn btn-primary btn-xl js-scroll-trigger">Get in touch</a>
+        <a href="mailto:info@splinecloud.com" class="btn btn-primary btn-xl js-scroll-trigger">Get in touch</a>
       </div>
 
     </div>
@@ -311,9 +259,9 @@
     <div class="container">
       <div class="section-heading text-center">
         <h2>Want to know more?</h2>
-        <p class="text-muted">contact us by leaving a message</p>
+        <p class="text-muted">leave us a message</p>
       </div>
-        <form method="post" action="https://formsubmit.co/vadym@splinecloud.com" id="mailform">
+        <form method="post" action="/website-message/" id="mailform">
           <div class="row creds">
             <div class="col-md-4 mb-4">
               <input type="text" name="name" placeholder="Name" class="w-100"/>
@@ -349,10 +297,6 @@
           <p>&copy; SplineCloud 2021. All Rights Reserved.</p>
         </div>
         <div class="col-4 footer-switch">
-          <div class="custom-control custom-switch float-right">
-            <input type="checkbox" class="custom-control-input" id="website-version-switch">
-            <label class="custom-control-label pt-1" id="website-version-switch-label" for="website-version-switch">V1</label>
-          </div>
         </div>
       </div>
     </div>
@@ -369,46 +313,6 @@
   <script src="js/new-age.min.js"></script>
 
   <script type="application/javascript">
-
-    // try {
-    //   var site_version = 1;
-    //   fetch('https://api.ipify.org?format=json')
-    //     .then(function(response) {
-    //       return response.json();
-    //     })
-    //     .then(function(location_data) {
-    //       // let ip_to_int = location_data.ip.replaceAll(".", "");
-    //       // site_version = ip_to_int%2;
-    //       // console.log("site_version:", site_version);
-    //       if (site_version) {
-    //         setSolSectionV2();
-    //         let solswitch = document.getElementById("website-version-switch");
-    //         solswitch.checked = true;
-    //       }
-    //       else {
-    //         setSolSectionV1();
-    //       }
-    //     }).catch(function() {
-    //       setSolSectionV1();
-    //     });
-    // }
-
-    // catch {
-    //   setSolSectionV2();
-    // }
-
-    setSolSectionV2();
-
-    var solswitch = document.getElementById("website-version-switch");
-    solswitch.addEventListener('change', function(event) {
-        if (event.target.checked) {
-            setSolSectionV2();
-        }
-        else {
-            setSolSectionV1();
-        }
-      }
-    );
   </script>
 
 </body>
