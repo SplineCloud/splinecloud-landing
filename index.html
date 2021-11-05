@@ -278,10 +278,19 @@
               <textarea name="message" placeholder="Message" id="message" required></textarea>
             </div>
           </div>
-          <div class="row text-center mt-5">
-            <div class="col-12 text-center" id="msg-wrap">
+          <div class="d-flex align-items-center 
+                  justify-content-center justify-content-sm-between
+                  flex-sm-row flex-column flex-column-reverse mt-4">
+
+            <div class="text-center my-3" id="msg-wrap">
               <input type="submit" class="btn btn-outline btn-xl js-scroll-trigger" value="Submit" id="send-msg" />
             </div>
+
+            <div class="" id="recaptcha-wrap">
+              <script src='https://www.google.com/recaptcha/api.js'></script>
+              <div class="g-recaptcha w-100" data-sitekey=""></div>
+            </div>
+
           </div>
         </form>
     </div>
