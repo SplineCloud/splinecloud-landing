@@ -480,6 +480,12 @@ section.cta .overlay {
   /*background-color: rgba(19, 51, 72, 0.85);*/
 }
 
+
+section.solutions h5 {
+  font-size: 1.6rem;
+}
+
+
 section.solutions {
   position: relative;
   padding: 100px 0;
