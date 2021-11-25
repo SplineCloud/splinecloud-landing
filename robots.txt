@@ -1,6 +1,4 @@
 User-Agent: *
 Allow: / 
-Disallow: /contact/
-Disallow: /signup/
 
 Sitemap: https://splinecloud.com/sitemap.xml
