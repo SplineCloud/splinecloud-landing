@@ -703,3 +703,15 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 .contacthead textarea {
   min-height: 180px;
 }
+
+#intro-video {
+  padding-bottom: 150px;
+}
+
+#intro-video iframe{
+  border-radius: 5px;
+  border:  none;
+  /*border: solid #3282b8 1px;*/
+  -webkit-filter: drop-shadow(-6px 6px 2px #cddcea);
+  filter: drop-shadow(-6px 6px 2px #cddcea);
+}
