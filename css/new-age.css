@@ -394,8 +394,8 @@ section.features .feature-item i {
 }
 
 .feature-item img {
-  max-height: 150px;
-  padding-bottom: 20px;
+  max-height: 110px;
+  /*padding-bottom: 20px;*/
 }
 
 section.contact .section-heading {
@@ -705,7 +705,7 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 }
 
 #intro-video {
-  padding-bottom: 150px;
+  /*padding-bottom: 150px;*/
 }
 
 #intro-video iframe{
