@@ -712,8 +712,12 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   border-radius: 5px;
   border:  none;
   /*border: solid #3282b8 1px;*/
-  -webkit-filter: drop-shadow(-6px 6px 2px #cddcea);
-  filter: drop-shadow(-6px 6px 2px #cddcea);
+
+/*  -webkit-filter: drop-shadow(-6px 6px 2px #cddcea);
+  filter: drop-shadow(-6px 6px 2px #cddcea);*/
+
+  -webkit-filter: drop-shadow(-4px 4px 6px #cddcea);
+  filter: drop-shadow(-4px 4px 6px #cddcea);
 }
 
 
@@ -789,14 +793,14 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 }
 
 .timeline > li .timeline-image img {
-  margin-top: 20%;
+  margin-top: 18%;
   max-height: 60%;
 }
 
 
 .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
   font-size: 10px;
-  /*line-height: 14px;*/
+  line-height: 14px;
   margin-top: 12px;
 }
 .timeline > li.timeline-inverted > .timeline-panel {
@@ -836,24 +840,46 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 }
 
 .timeline > li .timeline-preview {
-  /*padding-top:  80px;*/
-  margin-top: -30px;
-  margin-bottom: 120px;
+  margin-bottom: 110px;
 }
 
 
 .timeline video {
-    border-radius: 5px;
+    /*border-radius: 5px;*/
   border:  none;
-  border: 1px solid #e9ecef;
+/*  border-top: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;*/
+  /*border: 1px solid #e9ecef;*/
 /*    -webkit-filter: drop-shadow(-4px 4px 6px #cddcea);
   filter: drop-shadow(-4px 4px 6px #cddcea);*/
 
-  -webkit-filter: drop-shadow(-2px 2px 3px #cddcea);
-  filter: drop-shadow(-2px 2px 3px #cddcea);
+/*  -webkit-filter: drop-shadow(-2px 2px 3px #cddcea);
+  filter: drop-shadow(-2px 2px 3px #cddcea);*/
+
+/*  -webkit-filter: drop-shadow(0 2px 3px #cddcea);
+  filter: drop-shadow(0 2px 3px #cddcea);*/
 
 }
 
+.video-top-border {
+  min-height: 8px;
+  height: 8px;
+  -moz-border-radius-topright: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-top-left-radius: 8px;
+  background: linear-gradient(0deg, rgba(205,220,234,0.25) 0%, rgba(255,255,255,0.25) 100%);
+}
+
+.video-bottom-border {
+  min-height: 8px;
+  height: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  background: linear-gradient(180deg, rgba(205,220,234,0.25) 0%, rgba(255,255,255,0.25) 100%);
+}
 
 
 @media (min-width: 768px) {
