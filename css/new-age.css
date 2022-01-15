@@ -871,6 +871,8 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 }
 .timeline .timeline-body > ul,
 .timeline .timeline-body > p {
+  text-align: justify;
+  text-justify: inter-word;
   margin-bottom: 0;
 }
 
@@ -882,7 +884,7 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 .timeline > li.timeline-inverted .timeline-preview  {
   /*margin-bottom: 110px;*/
   padding: 0 0 0 80px;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
 }
 
 .timeline video {
@@ -939,7 +941,7 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   }
   .timeline > li {
     min-height: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   .timeline > li .timeline-panel {
     float: left;
@@ -978,12 +980,27 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 
   .timeline > li.timeline-inverted > .timeline-preview {
     float: left;
-    width: 41%;
+    /*width: 41%;*/
+    width: 50%;
+    padding-right:  30px;
     /*padding: 0 20px 20px 30px;*/
+  }
+
+  .timeline .timeline-heading h3 {
+    margin-top: 30px;
+    margin-left: 0;
   }
 
 }
 @media (min-width: 992px) {
+
+  .timeline > li .timeline-preview,
+  .timeline > li.timeline-inverted .timeline-preview  {
+    padding-top: 210px;
+    margin-bottom: 0px;
+  }
+
+
   .timeline > li {
     min-height: 150px;
   }
@@ -1005,6 +1022,9 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   }
 }
 @media (min-width: 1200px) {
+  .timeline .timeline-heading h3 {
+    margin-top: 60px;
+  }
   .timeline > li {
     min-height: 170px;
   }
