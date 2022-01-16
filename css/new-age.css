@@ -126,15 +126,12 @@ select:-webkit-autofill:focus {
 @media (min-width: 576px) {
   .container, .container-sm {
     max-width: 540px;
-    /*max-width: calc(100% - 30px);*/
   }
 }
 
 @media (min-width: 768px) {
   .container, .container-sm, .container-md {
-    /*max-width: 720px;*/
-    max-width: calc(96% - 30px);
-    /*max-width:  96%;*/
+    max-width: 720px;
   }
 }
 
@@ -779,7 +776,7 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 .timeline > li {
   position: relative;
   min-height: 50px;
-  /*margin-bottom: 50px;*/
+  margin-bottom: 50px;
 }
 .timeline > li:after, .timeline > li:before {
   display: table;
@@ -884,12 +881,14 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 .timeline > li.timeline-inverted .timeline-preview  {
   /*margin-bottom: 110px;*/
   padding: 0 0 0 80px;
-  /*margin-bottom: 40px;*/
+  text-align: center;
 }
+
 
 .timeline video {
   border:  none;
   width:  100%;
+  /*max-width: 580px;*/
 }
 
 .video-top-border {
@@ -915,26 +914,47 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 
 @media (min-width: 768px) {
 
-/*  .timeline video {
-    width:  120%;
-  }*/
-  
+  .timeline {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .timeline .timeline-heading h3 {
+    margin-top: 40px;
+    margin-left: 60px;
+  }
+
+  .timeline .timeline-body > p {
+    margin-top: 55px;
+    margin-left: 16px;
+  }
+
+  .timeline > li .timeline-preview,
+  .timeline > li.timeline-inverted .timeline-preview  {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .timeline:before {
+    left: 60px;
+  }
+
+  .timeline > li .timeline-image {
+    width: 120px;
+    height: 120px;
+  }
+
   .timeline > li .timeline-image img {
     margin-top: 18%;
     max-height: 60%;
   }
 
-  .timeline > li .timeline-preview {
-    /*margin-left:  -30px!important;*/
-  }
-
+/*
   .timeline > li .timeline-preview,
   .timeline > li.timeline-inverted .timeline-preview  {
     padding: 120px 0 0 0;
     margin-bottom: 0px;
-    /*margin-top:  -50px;*/
-    /*margin-right: 30px;*/
-}
+  }
 
   .timeline:before {
     left: 50%;
@@ -946,17 +966,79 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   .timeline > li .timeline-panel {
     float: left;
     width: 41%;
-
-    /*width: 50%;*/
     padding: 0 20px 20px 30px;
-
-    text-align: right;
   }
-
 
   .timeline > li .timeline-preview {
     float: right;
-    /*width: 41%;*/
+    width: 50%;
+    padding-left:  30px;
+  }
+
+
+  .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 16px;
+  }
+  .timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+    padding: 0 30px 20px 20px;
+    text-align: left;
+  }
+
+  .timeline > li.timeline-inverted > .timeline-preview {
+    float: left;
+    width: 50%;
+    padding-right:  30px;
+  }
+
+  .timeline .timeline-heading h3 {
+    margin-top: 30px;
+    margin-left: 0;
+  }*/
+
+}
+@media (min-width: 992px) {
+
+  .timeline {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+/*  .timeline > li {
+    margin-bottom: 90px;
+  }*/
+
+  .timeline > li .timeline-preview,
+  .timeline > li.timeline-inverted .timeline-preview  {
+    margin:  0;
+    padding: 120px 0 0 0;
+    margin-bottom: 0px;
+  }
+
+  .timeline:before {
+    left: 50%;
+  }
+  .timeline > li {
+    min-height: 100px;
+    margin-bottom: 50px;
+  }
+
+  .timeline .timeline-body > p {
+    margin-top: 46px;
+    margin-left: 0;
+  }
+
+  .timeline > li .timeline-panel {
+    float: left;
+    width: 41%;
+    padding: 0 20px 20px 30px;
+    text-align: right;
+  }
+
+  .timeline > li .timeline-preview {
+    float: right;
     width: 50%;
     padding-left:  30px;
   }
@@ -980,19 +1062,17 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 
   .timeline > li.timeline-inverted > .timeline-preview {
     float: left;
-    /*width: 41%;*/
     width: 50%;
     padding-right:  30px;
-    /*padding: 0 20px 20px 30px;*/
   }
 
   .timeline .timeline-heading h3 {
-    margin-top: 30px;
+    margin-top: 50px;
     margin-left: 0;
   }
 
-}
-@media (min-width: 992px) {
+
+
 
   .timeline > li .timeline-preview,
   .timeline > li.timeline-inverted .timeline-preview  {
