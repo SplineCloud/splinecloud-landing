@@ -109,32 +109,6 @@ select:-webkit-autofill:focus {
   }
 }
 
-
-.container,
-.container-fluid,
-.container-sm,
-.container-md,
-.container-lg,
-.container-xl {
-  width: 100%;
-  padding-right: 0px;
-  padding-left: 0px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (min-width: 576px) {
-  .container, .container-sm {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container, .container-sm, .container-md {
-    max-width: 720px;
-  }
-}
-
 @media (min-width: 992px) {
   .container, .container-sm, .container-md, .container-lg {
     /*max-width: 960px;*/
@@ -145,7 +119,6 @@ select:-webkit-autofill:focus {
 @media (min-width: 1200px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
     max-width: 1140px;
-    /*max-width: calc(96% - 30px);*/
   }
 }
 
@@ -744,24 +717,23 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   min-height: 180px;
 }
 
-#intro-video iframe{
+
+#intro-video iframe {
+  width:  520px;
+  height:  320px;
+  max-width: 100%;
+  margin-top: 15px;
   border-radius: 5px;
   border:  none;
-  /*border: solid #3282b8 1px;*/
-
-/*  -webkit-filter: drop-shadow(-6px 6px 2px #cddcea);
-  filter: drop-shadow(-6px 6px 2px #cddcea);*/
-
   -webkit-filter: drop-shadow(-4px 4px 6px #cddcea);
   filter: drop-shadow(-4px 4px 6px #cddcea);
 }
-
 
 .timeline {
   position: relative;
   padding: 0;
   list-style: none;
-  /*border:  solid 1px red;*/
+  margin-left: -10px;
 }
 .timeline:before {
   position: absolute;
@@ -777,6 +749,9 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   position: relative;
   min-height: 50px;
   margin-bottom: 50px;
+}
+.timeline-preview-last {
+  margin-bottom: 5px;
 }
 .timeline > li:after, .timeline > li:before {
   display: table;
@@ -814,28 +789,20 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   margin-left: 0;
   text-align: center;
   color: white;
-  /*border: 1px solid #3282b8;*/
   border: 2px solid #e9ecef;
-  /*border: none;*/
   border-radius: 100%;
-  background-color: white;
-
+  background-color: #fafbfd;
 }
-
 .timeline > li .timeline-image img {
   margin-top: 14%;
   max-height: 70%;
 }
-
-
 .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
   font-size: 10px;
   line-height: 14px;
   margin-top: 12px;
 }
 .timeline > li.timeline-inverted > .timeline-panel {
-  /*float: right;*/
-  /*padding: 0 20px 0 80px;*/
   text-align: left;
 }
 .timeline > li.timeline-inverted > .timeline-panel:before {
@@ -858,7 +825,6 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   margin-left: 16px;
   font-size: 32px;
 }
-
 .timeline .timeline-heading h4, .timeline .timeline-heading .h4 {
   margin-top: 0;
   color: inherit;
@@ -872,25 +838,18 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   text-justify: inter-word;
   margin-bottom: 0;
 }
-
 .timeline .timeline-body > p {
   margin-top: 32px;
 }
-
 .timeline > li .timeline-preview,
 .timeline > li.timeline-inverted .timeline-preview  {
-  /*margin-bottom: 110px;*/
   padding: 0 0 0 80px;
   text-align: center;
 }
-
-
 .timeline video {
   border:  none;
   width:  100%;
-  /*max-width: 580px;*/
 }
-
 .video-top-border {
   min-height: 8px;
   height: 8px;
@@ -900,7 +859,6 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   -webkit-border-top-left-radius: 8px;
   background: linear-gradient(0deg, rgba(205,220,234,0.25) 0%, rgba(255,255,255,0.25) 100%);
 }
-
 .video-bottom-border {
   min-height: 8px;
   height: 8px;
@@ -910,113 +868,77 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   -webkit-border-bottom-left-radius: 8px;
   background: linear-gradient(180deg, rgba(205,220,234,0.25) 0%, rgba(255,255,255,0.25) 100%);
 }
-
-
+@media (min-width: 576px) {
+  .timeline {
+    margin-left: -20px;
+    margin-right: 0px;
+  }
+  .timeline:before {
+    left: 50px;
+  }
+  .timeline > li .timeline-image {
+    width: 100px;
+    height: 100px;
+  }
+  .timeline > li .timeline-image img {
+    margin-top: 18%;
+    max-height: 60%;
+  }
+  .timeline .timeline-body > p {
+    margin-top: 40px;
+  }
+  .timeline .timeline-heading h3 {
+    margin-top: 30px;
+    margin-left: 50px;
+  }
+}
 @media (min-width: 768px) {
-
   .timeline {
     margin-left: 30px;
     margin-right: 30px;
   }
-
   .timeline .timeline-heading h3 {
     margin-top: 40px;
     margin-left: 60px;
   }
-
   .timeline .timeline-body > p {
     margin-top: 55px;
     margin-left: 16px;
   }
-
   .timeline > li .timeline-preview,
   .timeline > li.timeline-inverted .timeline-preview  {
     margin-left: 40px;
     margin-right: 40px;
   }
-
   .timeline:before {
     left: 60px;
   }
-
   .timeline > li .timeline-image {
     width: 120px;
     height: 120px;
   }
-
-  .timeline > li .timeline-image img {
-    margin-top: 18%;
-    max-height: 60%;
-  }
-
-/*
-  .timeline > li .timeline-preview,
-  .timeline > li.timeline-inverted .timeline-preview  {
-    padding: 120px 0 0 0;
-    margin-bottom: 0px;
-  }
-
-  .timeline:before {
-    left: 50%;
-  }
-  .timeline > li {
-    min-height: 100px;
-    margin-bottom: 50px;
-  }
-  .timeline > li .timeline-panel {
-    float: left;
-    width: 41%;
-    padding: 0 20px 20px 30px;
-  }
-
-  .timeline > li .timeline-preview {
-    float: right;
-    width: 50%;
-    padding-left:  30px;
-  }
-
-
-  .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
-    font-size: 13px;
-    line-height: 18px;
-    margin-top: 16px;
-  }
-  .timeline > li.timeline-inverted > .timeline-panel {
-    float: right;
-    padding: 0 30px 20px 20px;
-    text-align: left;
-  }
-
-  .timeline > li.timeline-inverted > .timeline-preview {
-    float: left;
-    width: 50%;
-    padding-right:  30px;
-  }
-
-  .timeline .timeline-heading h3 {
-    margin-top: 30px;
-    margin-left: 0;
-  }*/
-
 }
 @media (min-width: 992px) {
-
+  #intro-video-hr {
+    margin: 0;
+    display: none;
+  }
+  .timeline-preview-last {
+    margin-bottom: 120px!important;
+  }
+  #intro-video iframe {
+    /*margin-top: -90px;*/
+  }
   .timeline {
     margin-left: 0;
     margin-right: 0;
   }
-
-/*  .timeline > li {
-    margin-bottom: 90px;
-  }*/
-
   .timeline > li .timeline-preview,
   .timeline > li.timeline-inverted .timeline-preview  {
     margin:  0;
     padding: 120px 0 0 0;
     margin-bottom: 0px;
   }
-
   .timeline:before {
     left: 50%;
   }
@@ -1024,25 +946,21 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
     min-height: 100px;
     margin-bottom: 50px;
   }
-
   .timeline .timeline-body > p {
     margin-top: 46px;
     margin-left: 0;
   }
-
   .timeline > li .timeline-panel {
     float: left;
     width: 41%;
     padding: 0 20px 20px 30px;
     text-align: right;
   }
-
   .timeline > li .timeline-preview {
     float: right;
     width: 50%;
     padding-left:  30px;
   }
-
   .timeline > li .timeline-image {
     left: 50%;
     width: 100px;
@@ -1059,28 +977,20 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
     padding: 0 30px 20px 20px;
     text-align: left;
   }
-
   .timeline > li.timeline-inverted > .timeline-preview {
     float: left;
     width: 50%;
     padding-right:  30px;
   }
-
   .timeline .timeline-heading h3 {
     margin-top: 50px;
     margin-left: 0;
   }
-
-
-
-
   .timeline > li .timeline-preview,
   .timeline > li.timeline-inverted .timeline-preview  {
     padding-top: 210px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
   }
-
-
   .timeline > li {
     min-height: 150px;
   }
@@ -1102,6 +1012,9 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   }
 }
 @media (min-width: 1200px) {
+  .timeline {
+    margin-bottom: 0!important;
+  }
   .timeline .timeline-heading h3 {
     margin-top: 60px;
   }
@@ -1122,4 +1035,11 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 100px 20px 20px;
   }
+
+  .timeline > li .timeline-preview,
+  .timeline > li.timeline-inverted .timeline-preview  {
+    padding-top: 260px;
+    margin-bottom: 40px;
+  }
+
 }
